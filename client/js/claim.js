@@ -52,13 +52,14 @@ angular.module('nibs.claim', ['nibs.config'])
                   $ionicPopup.alert({title: 'Oops', content: 'Please provide signature.'});
             }else {
                   var dataURL = signaturePad.toDataURL();
-                 // dataURL = dataURL.replace('data:image/png;base64,', '');
                   $scope.claim.signatureDataurl = dataURL;
-            }
-                Claim.create($scope.claim).success(function() {
+                  Claim.create($scope.claim).success(function() {
                      $ionicPopup.alert({title: 'Thank You', content: 'Your Claim submitted successfully.'});
                      $scope.claim = {};
+                     signaturePad.clear();
                 });
+            }
+                
           
         };
 
