@@ -42,13 +42,17 @@ angular.module('nibs.claim', ['nibs.config'])
         resizeCanvas();
         signaturePad = new SignaturePad(canvas);
         
+        $scope.clearSign=function(){
+            signaturePad.clear();
+        }
+        
         $scope.submit = function () {
             
          if (signaturePad.isEmpty()) {
                   $ionicPopup.alert({title: 'Oops', content: 'Please provide signature.'});
             }else {
                   var dataURL = signaturePad.toDataURL();
-                  dataURL = dataURL.replace('data:image/png;base64,', '');
+                 // dataURL = dataURL.replace('data:image/png;base64,', '');
                   $scope.claim.signatureDataurl = dataURL;
             }
                 Claim.create($scope.claim).success(function() {
