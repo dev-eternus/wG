@@ -49,7 +49,7 @@ angular.module('nibs.claim', ['nibs.config'])
         $scope.submit = function () {
             
          if (signaturePad.isEmpty()) {
-                  $ionicPopup.alert({title: 'Oops', content: 'Please provide signature.'});
+                  $ionicPopup.alert({title: 'Required', content: 'Please provide signature.'});
             }else {
                   var dataURL = signaturePad.toDataURL();
                   $scope.claim.signatureDataurl = dataURL;
