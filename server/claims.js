@@ -30,7 +30,7 @@ function createClaims(req, res, next) {
 
  db.query('SELECT sfid FROM salesforce.contact WHERE id=$1',[req.userId], true)
         .then(function (user) {
-            console.log(req.userId+"---------sfid------------------>: " + user.sfid);
+            console.log(req.userId+"---------wow------------------>: " +req.body.signatureDataurl);
             // case is a reserved word. using _case instead.
             var claimObj = nforce.createSObject('Claim__c');
             claimObj.set('Claimant_Name__c', req.body.claimant);
@@ -38,6 +38,7 @@ function createClaims(req, res, next) {
             claimObj.set('PAN_Number__c', req.body.panno);
             claimObj.set('Policy_Holder_Name__c', req.body.policyholdername);
             claimObj.set('Telephone_Number__c', req.body.phone);
+            claimObj.set('Signature__c', req.body.signatureDataurl);
             claimObj.set('Linked_Contact__c', req.userId);
             
 
