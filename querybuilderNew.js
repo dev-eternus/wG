@@ -1892,7 +1892,6 @@ function(a, b) {
             } : {
                 sql: g
             }
-            alert(' sid '+sql);
         },
         getRulesFromSQL: function(a, b) {
             "SQLParser" in window || l.error("MissingLibrary", "SQLParser is required to parse SQL queries. Get it here https://github.com/mistic100/sql-parser");
