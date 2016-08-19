@@ -3,7 +3,7 @@
  * Copyright 2014-2016 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
  * Licensed under MIT (http://opensource.org/licenses/MIT)
  */
- alert('RVD');
+ alert('HHH');
 ! function(a, b) {
     "function" == typeof define && define.amd ? define("jQuery.extendext", ["jquery"], b) : b(a.jQuery)
 }(this, function($) {
@@ -1892,9 +1892,8 @@ function(a, b) {
                     }), d.join(" " + c.condition + b)
                     
                 }(c);
-              alert(a+' a '+g+'raj g '+JSON.stringify(g));  
             return a ? {
-                
+                alert(g+'raj g '+JSON.stringify(g));  
                 sql: g,
                 params: a.run()
             } : {
