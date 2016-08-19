@@ -1868,7 +1868,8 @@ function(a, b) {
     }), g.extend({
         getSQL: function(a, b, c) {
             
-            
+            alert(a+' c '+c);
+            alert(' b '+b);
             alert('raj '+JSON.stringify(this.getRules()));
             if (c = void 0 === c ? this.getRules() : c, b = b === !0 ? "\n" : " ", a === !0 && (a = "question_mark"), "string" == typeof a) {
                 var d = f(a);
@@ -1900,6 +1901,8 @@ function(a, b) {
             }
         },
         getRulesFromSQL: function(a, b) {
+         
+         alert('siddhraj');
             "SQLParser" in window || l.error("MissingLibrary", "SQLParser is required to parse SQL queries. Get it here https://github.com/mistic100/sql-parser");
             var c = this;
             if ("string" == typeof a && (a = {
