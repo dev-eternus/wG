@@ -1888,11 +1888,9 @@ function(a, b) {
                     }), d.join(" " + c.condition + b)
                 }(c);
             return a ? {
-                alert('sql : '+g);
                 sql: g,
                 params: a.run()
             } : {
-                alert('sql 1 : '+g);
                 sql: g
             }
             
