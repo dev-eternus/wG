@@ -3,6 +3,7 @@
  * Copyright 2014-2016 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
  * Licensed under MIT (http://opensource.org/licenses/MIT)
  */
+ alert('HHH');
 ! function(a, b) {
     "function" == typeof define && define.amd ? define("jQuery.extendext", ["jquery"], b) : b(a.jQuery)
 }(this, function($) {
@@ -1885,14 +1886,17 @@ function(a, b) {
                             })), d.push(c.field + " " + f.op.replace(/\?/, i))
                         }
                     }), d.join(" " + c.condition + b)
+                    alert('sql 0 : '+c);
                 }(c);
             return a ? {
+                alert('sql : '+g);
                 sql: g,
                 params: a.run()
             } : {
+                alert('sql 1 : '+g);
                 sql: g
             }
-            alert('sql : '+sql);
+            
         },
         getRulesFromSQL: function(a, b) {
             "SQLParser" in window || l.error("MissingLibrary", "SQLParser is required to parse SQL queries. Get it here https://github.com/mistic100/sql-parser");
