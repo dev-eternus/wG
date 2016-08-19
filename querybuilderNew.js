@@ -1886,6 +1886,7 @@ function(a, b) {
                             })), d.push(c.field + " " + f.op.replace(/\?/, i))
                         }
                     }), d.join(" " + c.condition + b)
+                  alert('c : '+c);  
                 }(c);
             return a ? {
                 sql: g,
