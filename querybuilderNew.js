@@ -3,7 +3,7 @@
  * Copyright 2014-2016 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
  * Licensed under MIT (http://opensource.org/licenses/MIT)
  */
- alert('HHH1');
+ alert('HHH');
 ! function(a, b) {
     "function" == typeof define && define.amd ? define("jQuery.extendext", ["jquery"], b) : b(a.jQuery)
 }(this, function($) {
@@ -1886,13 +1886,13 @@ function(a, b) {
                             })), d.push(c.field + " " + f.op.replace(/\?/, i))
                         }
                     }), d.join(" " + c.condition + b)
-                  alert('c : '+c);  
+                 
                 }(c);
             return a ? {
-                sql: g,
+                sql: g+' sid ',
                 params: a.run()
             } : {
-                sql: g
+                sql: g+'raj';
             }
             
         },
