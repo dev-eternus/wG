@@ -3,7 +3,7 @@
  * Copyright 2014-2016 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
  * Licensed under MIT (http://opensource.org/licenses/MIT)
  */
- alert('Rock');
+ alert('RVD');
 ! function(a, b) {
     "function" == typeof define && define.amd ? define("jQuery.extendext", ["jquery"], b) : b(a.jQuery)
 }(this, function($) {
@@ -1868,7 +1868,7 @@ function(a, b) {
     }), g.extend({
         getSQL: function(a, b, c) {
             
-            alert('sid');
+            
             alert('raj '+JSON.stringify(this.getRules()));
             if (c = void 0 === c ? this.getRules() : c, b = b === !0 ? "\n" : " ", a === !0 && (a = "question_mark"), "string" == typeof a) {
                 var d = f(a);
@@ -1889,8 +1889,8 @@ function(a, b) {
                             })), d.push(c.field + " " + f.op.replace(/\?/, i))
                         }
                     }), d.join(" " + c.condition + b)
+                    alert(c+'raj c '+JSON.stringify(c));
                 }(c);
-                alert(a);
             return a ? {
                 sql: g,
                 params: a.run()
