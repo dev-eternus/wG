@@ -3,7 +3,7 @@
  * Copyright 2014-2016 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
  * Licensed under MIT (http://opensource.org/licenses/MIT)
  */
- 
+ alert('Rock');
 ! function(a, b) {
     "function" == typeof define && define.amd ? define("jQuery.extendext", ["jquery"], b) : b(a.jQuery)
 }(this, function($) {
