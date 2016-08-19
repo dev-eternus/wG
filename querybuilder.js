@@ -1866,6 +1866,9 @@ function(a, b) {
         }
     }), g.extend({
         getSQL: function(a, b, c) {
+            
+            alert('sid');
+            alert('raj '+this.getRules());
             if (c = void 0 === c ? this.getRules() : c, b = b === !0 ? "\n" : " ", a === !0 && (a = "question_mark"), "string" == typeof a) {
                 var d = f(a);
                 a = this.settings.sqlStatements[d[1]](d[2])
