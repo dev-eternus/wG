@@ -1892,13 +1892,13 @@ function(a, b) {
                     }), d.join(" " + c.condition + b)
                     
                 }(c);
-              alert(g+'raj g '+JSON.stringify(g));  
+              alert(a+' a '+g+'raj g '+JSON.stringify(g));  
             return a ? {
-                alert('s '+g);
+                
                 sql: g,
                 params: a.run()
             } : {
-                alert('s1 '+g);
+               
                 sql: g
             }
         },
