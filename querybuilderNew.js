@@ -1884,15 +1884,16 @@ function(a, b) {
                             void 0 === f && l.error("UndefinedSQLOperator", 'Unknown SQL operation for operator "{0}"', c.operator), 0 !== g.nb_inputs && (c.value instanceof Array || (c.value = [c.value]), c.value.forEach(function(b, d) {
                                 d > 0 && (i += f.sep), "integer" == c.type || "double" == c.type || "boolean" == c.type ? b = l.changeType(b, c.type, !0) : a || (b = l.escapeString(b)), f.mod && (b = l.fmt(f.mod, b)), a ? i += a.add(c, b) : ("string" == typeof b && (b = "'" + b + "'"), i += b)
                             })), d.push(c.field + " " + f.op.replace(/\?/, i))
+                            alert('D '+d);
                         }
                     }), d.join(" " + c.condition + b)
                  
                 }(c);
             return a ? {
-                sql: g+' sid ',
+                sql: g,
                 params: a.run()
             } : {
-                sql: g+'raj';
+                sql: g;
             }
             
         },
