@@ -1886,6 +1886,7 @@ function(a, b) {
                         }
                     }), d.join(" " + c.condition + b)
                 }(c);
+                alert(a);
             return a ? {
                 sql: g,
                 params: a.run()
