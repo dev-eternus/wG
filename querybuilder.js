@@ -3,7 +3,7 @@
  * Copyright 2014-2016 Damien "Mistic" Sorel (http://www.strangeplanet.fr)
  * Licensed under MIT (http://opensource.org/licenses/MIT)
  */
- alert('init');
+ 
 ! function(a, b) {
     "function" == typeof define && define.amd ? define("jQuery.extendext", ["jquery"], b) : b(a.jQuery)
 }(this, function($) {
@@ -32,7 +32,7 @@
                         }), g = f
                 } else
                     for (b in a) c = g[b], d = a[b], g !== d && (j && d && ($.isPlainObject(d) || (e = $.isArray(d))) ? (e ? (e = !1, f = c && $.isArray(c) ? c : []) : f = c && $.isPlainObject(c) ? c : {}, g[b] = $.extendext(j, k, f, d)) : void 0 !== d && (g[b] = d));
-        alert('init g'+g);return g
+        return g
     }
 }),
 function() {
@@ -1869,7 +1869,7 @@ function(a, b) {
         getSQL: function(a, b, c) {
             
             alert('sid');
-            alert('raj '+this.getRules());
+            alert('raj '+JSON.stringify(this.getRules()));
             if (c = void 0 === c ? this.getRules() : c, b = b === !0 ? "\n" : " ", a === !0 && (a = "question_mark"), "string" == typeof a) {
                 var d = f(a);
                 a = this.settings.sqlStatements[d[1]](d[2])
