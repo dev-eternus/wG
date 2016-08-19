@@ -1868,8 +1868,7 @@ function(a, b) {
     }), g.extend({
         getSQL: function(a, b, c) {
             
-            alert(a+' c '+c);
-            alert(' b '+b);
+           
             alert('raj '+JSON.stringify(this.getRules()));
             if (c = void 0 === c ? this.getRules() : c, b = b === !0 ? "\n" : " ", a === !0 && (a = "question_mark"), "string" == typeof a) {
                 var d = f(a);
@@ -1891,12 +1890,15 @@ function(a, b) {
                             })), d.push(c.field + " " + f.op.replace(/\?/, i))
                         }
                     }), d.join(" " + c.condition + b)
-                    alert(c+'raj c '+JSON.stringify(c));
+                    
                 }(c);
+              alert(g+'raj g '+JSON.stringify(g));  
             return a ? {
+                alert('s '+g);
                 sql: g,
                 params: a.run()
             } : {
+                alert('s1 '+g);
                 sql: g
             }
         },
