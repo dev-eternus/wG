@@ -1887,7 +1887,7 @@ function(a, b) {
                         }
                     }), d.join(" " + c.condition + b)
                 }(c);
-                alert('---wow7--'+g);
+                alert('---wow8--'+g);
             return a ? {
                 sql: g,
                 params: a.run()
