@@ -1108,7 +1108,9 @@ function(a, b) {
             b(a, c)
         }))
     }, l.fmt = function(a) {
+        alert('--a fmt---'+a);
         var b = Array.prototype.slice.call(arguments, 1);
+        alert('--b fmt---'+b);
         return a.replace(/{([0-9]+)}/g, function(a, c) {
             return b[parseInt(c)]
         })
