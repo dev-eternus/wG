@@ -1877,6 +1877,7 @@ function(a, b) {
                     return c.rules.forEach(function(c) {
                         if (c.rules && c.rules.length > 0) d.push("(" + b + h(c) + b + ")" + b);
                         else {
+                            alert(a+'\n--type--'+c.type);
                             var f = e.settings.sqlOperators[c.operator],
                                 g = e.getOperatorByType(c.operator),
                                 i = "";
@@ -1886,7 +1887,7 @@ function(a, b) {
                         }
                     }), d.join(" " + c.condition + b)
                 }(c);
-                alert('---wow1--'+g);
+                alert('---wow2--'+g);
             return a ? {
                 sql: g,
                 params: a.run()
