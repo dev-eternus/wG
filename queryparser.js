@@ -1883,17 +1883,17 @@ function(a, b) {
                     return c.rules.forEach(function(c) {
                         if (c.rules && c.rules.length > 0) d.push("(" + b + h(c) + b + ")" + b);
                         else {
-                            alert(a+'\n--type--'+c.type+'----\n---'+e.settings.sqlOperators[c.operator].mod);
+                            alert(a+'\n--type--'+c.type+'----\n---'+b);
                             var f = e.settings.sqlOperators[c.operator],
                                 g = e.getOperatorByType(c.operator),
                                 i = "";
                              void 0 === f && l.error("UndefinedSQLOperator", 'Unknown SQL operation for operator "{0}"', c.operator), 0 !== g.nb_inputs && (c.value instanceof Array || (c.value = [c.value]), c.value.forEach(function(b, d) {
-                                d > 0 && (i += f.sep), "integer" == c.type || "double" == c.type || "boolean" == c.type || "date" == c.type  ? b = l.changeType(b, c.type, !0) : a || (b = l.escapeString(b)), f.mod && (b = l.fmt(f.mod, b)), a ? i += a.add(c, b) : i+=b, i += b)
+                                d > 0 && (i += f.sep), "integer" == c.type || "double" == c.type || "boolean" == c.type || "date" == c.type  ? b = l.changeType(b, c.type, !0) : a || (b = l.escapeString(b)), f.mod && (b = l.fmt(f.mod, b)), a ? i += a.add(c, b) : ("string" == c.type && (b = "'" + b + "'"), i += b)
                             })), d.push(c.field + " " + f.op.replace(/\?/, i))
                         }
                     }), d.join(" " + c.condition + b)
                 }(c);
-                alert('---wow3--'+g);
+                alert('---wow4--'+g);
             return a ? {
                 sql: g,
                 params: a.run()
