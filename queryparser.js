@@ -1108,9 +1108,7 @@ function(a, b) {
             b(a, c)
         }))
     }, l.fmt = function(a) {
-        alert('--a fmt---'+a);
         var b = Array.prototype.slice.call(arguments, 1);
-        alert('--b fmt---'+b);
         return a.replace(/{([0-9]+)}/g, function(a, c) {
             return b[parseInt(c)]
         })
@@ -1118,7 +1116,6 @@ function(a, b) {
         var c = new Error(l.fmt.apply(null, Array.prototype.slice.call(arguments, 1)));
         throw c.name = a + "Error", c.args = Array.prototype.slice.call(arguments, 2), c
     }, l.changeType = function(a, b, c) {
-        alert('---a---'+a);
         switch (b) {
             case "integer":
                 return parseInt(a);
@@ -1133,7 +1130,6 @@ function(a, b) {
                 return a
         }
     }, l.escapeString = function(a) {
-        alert(("string" != typeof a)+'--escapeString--'+a);
         return "string" != typeof a ? a : a.replace(/[\0\n\r\b\\\'\"]/g, function(a) {
             switch (a) {
                 case "\x00":
@@ -1883,7 +1879,6 @@ function(a, b) {
                     return c.rules.forEach(function(c) {
                         if (c.rules && c.rules.length > 0) d.push("(" + b + h(c) + b + ")" + b);
                         else {
-                            alert(a+'\n--type--'+c.type+'----\n---'+b);
                             var f = e.settings.sqlOperators[c.operator],
                                 g = e.getOperatorByType(c.operator),
                                 i = "";
@@ -1893,7 +1888,6 @@ function(a, b) {
                         }
                     }), d.join(" " + c.condition + b)
                 }(c);
-                alert('---wow4--'+g);
             return a ? {
                 sql: g,
                 params: a.run()
