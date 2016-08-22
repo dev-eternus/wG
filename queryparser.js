@@ -1877,7 +1877,7 @@ function(a, b) {
                     return c.rules.forEach(function(c) {
                         if (c.rules && c.rules.length > 0) d.push("(" + b + h(c) + b + ")" + b);
                         else {
-                            alert(a+'\n--type--'+c.type+'----\n---'+c.rules);
+                            alert(a+'\n--type--'+c.type+'----\n---');
                             var f = e.settings.sqlOperators[c.operator],
                                 g = e.getOperatorByType(c.operator),
                                 i = "";
@@ -1887,7 +1887,7 @@ function(a, b) {
                         }
                     }), d.join(" " + c.condition + b)
                 }(c);
-                alert('---wow6--'+g);
+                alert('---wow7--'+g);
             return a ? {
                 sql: g,
                 params: a.run()
