@@ -1882,12 +1882,12 @@ function(a, b) {
                                 g = e.getOperatorByType(c.operator),
                                 i = "";
                             void 0 === f && l.error("UndefinedSQLOperator", 'Unknown SQL operation for operator "{0}"', c.operator), 0 !== g.nb_inputs && (c.value instanceof Array || (c.value = [c.value]), c.value.forEach(function(b, d) {
-                                d > 0 && (i += f.sep), "integer" == c.type || "double" == c.type || "boolean" == c.type ? b  : a || (b = l.escapeString(b)), f.mod && (b = l.fmt(f.mod, b)), a ? i += a.add(c, b) : ("string" == typeof b && (b = "'" + b + "'"), i += b)
+                                d > 0 && (i += f.sep), "integer" == c.type || "double" == c.type || "boolean" == c.type ? b  : a || b, f.mod && (b = l.fmt(f.mod, b)), a ? i += a.add(c, b) : ("string" == typeof b && (b = "'" + b + "'"), i += b)
                             })), d.push(c.field + " " + f.op.replace(/\?/, i))
                         }
                     }), d.join(" " + c.condition + b)
                 }(c);
-                alert('---wow2--'+g);
+                alert('---wow3--'+g);
             return a ? {
                 sql: g,
                 params: a.run()
