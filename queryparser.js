@@ -1116,14 +1116,17 @@ function(a, b) {
         var c = new Error(l.fmt.apply(null, Array.prototype.slice.call(arguments, 1)));
         throw c.name = a + "Error", c.args = Array.prototype.slice.call(arguments, 2), c
     }, l.changeType = function(a, b, c) {
+        alert('---a---'+a);
         switch (b) {
             case "integer":
                 return parseInt(a);
+            case "date":
+                return a;    
             case "double":
                 return parseFloat(a);
             case "boolean":
                 var d = "true" === a.trim().toLowerCase() || "1" === a.trim() || 1 === a;
-                return c ? d ? 1 : 0 : d;
+                return c ? d ? true : false : d;
             default:
                 return a
         }
@@ -1882,12 +1885,12 @@ function(a, b) {
                                 g = e.getOperatorByType(c.operator),
                                 i = "";
                              void 0 === f && l.error("UndefinedSQLOperator", 'Unknown SQL operation for operator "{0}"', c.operator), 0 !== g.nb_inputs && (c.value instanceof Array || (c.value = [c.value]), c.value.forEach(function(b, d) {
-                                d > 0 && (i += f.sep), "integer" == c.type || "double" == c.type || "boolean" == c.type || "date" == c.type || "stringboolean" == c.type ? b = l.changeType(b, c.type, !0) : a || (b = l.escapeString(b)), f.mod && (b = l.fmt(f.mod, b)), a ? i += a.add(c, b) : ("string" == typeof b && (b = "'" + b + "'"), i += b)
+                                d > 0 && (i += f.sep), "integer" == c.type || "double" == c.type || "boolean" == c.type || "date" == c.type  ? b = l.changeType(b, c.type, !0) : a || (b = l.escapeString(b)), f.mod && (b = l.fmt(f.mod, b)), a ? i += a.add(c, b) : ("string" == typeof b && (b = "'" + b + "'"), i += b)
                             })), d.push(c.field + " " + f.op.replace(/\?/, i))
                         }
                     }), d.join(" " + c.condition + b)
                 }(c);
-                alert('---wow1--'+g);
+                alert('---wow2--'+g);
             return a ? {
                 sql: g,
                 params: a.run()
