@@ -1131,6 +1131,7 @@ function(a, b) {
                 return a
         }
     }, l.escapeString = function(a) {
+        alert(("string" != typeof a)+'--escapeString--'+a);
         return "string" != typeof a ? a : a.replace(/[\0\n\r\b\\\'\"]/g, function(a) {
             switch (a) {
                 case "\x00":
