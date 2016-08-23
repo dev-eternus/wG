@@ -1664,7 +1664,7 @@ function(a, b) {
                 sep: " AND "
             },
             begins_with: {
-                op: "LIKE(?)",
+                op: "LIKE ?",
                 mod: "{0}%"
             },
             not_begins_with: {
