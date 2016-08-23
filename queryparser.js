@@ -1694,10 +1694,10 @@ function(a, b) {
                 op: "!= ''"
             },
             is_null: {
-                op: "IS NULL"
+                op: "= NULL"
             },
             is_not_null: {
-                op: "IS NOT NULL"
+                op: "!= NULL"
             }
         },
         sqlRuleOperator: {
